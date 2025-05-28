@@ -25,11 +25,36 @@ global.tl_colide  = layer_tilemap_get_id("tl_wall")
 
 #endregion
 
+
+coyte_time = {
+
+def_time : 5,
+time : false
+
+
+	
+}
+
+coyte = function()
+{
+	if(!place_meeting(x,y+1,global.tl_colide))
+	{
+		coyte_time.time--	
+	}
+	else
+	{
+		coyte_time.time = coyte_time.def_time
+	}
+	
+}
+
 jump = function()
 {
+	
+	
 	var _i = global.inputs
 
-	if(place_meeting(x,y+1,global.tl_colide) and _i.jump)
+	if( _i.jump and coyte_time.time>=0)
 	{
 		state = "jump"
 		vspd-= jump_force
@@ -41,9 +66,14 @@ fall = function()
 {
 	if(!place_meeting(x,y+1,global.tl_colide) and vspd>1)
 	{
-		state = "fall"
+	 	state = "fall"
 		image_index = 0
 	}
+}
+
+swipe_sprite = function()
+{
+	if(hspd!=0) image_xscale = sign(hspd)
 }
 
 

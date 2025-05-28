@@ -1,12 +1,12 @@
    /// @description Insert description here
 // You can write your code in this editor
 
-
+vspd = clamp(vspd,-40,10)
 var _i = global.inputs
 scr_inputs(1)
 var _move = _i.right - _i.left
-
-
+swipe_sprite()
+coyte()
 
 switch(state)
 {
@@ -18,7 +18,6 @@ switch(state)
 		fall()
 		if(hspd != 0)
 		{
-			image_xscale = sign(hspd)
 			sprite_index = spr_player_run
 		}
 		else
@@ -46,12 +45,13 @@ switch(state)
 		vspd = grv + vspd
 		hspd = _move * spd
 		if(place_meeting(x,y+1,global.tl_colide)) state = "iddle"
+		jump()
 	}
 	break;
 }
 
 
-show_debug_message(state)
+show_debug_message(coyte_time.time)
 
 
 

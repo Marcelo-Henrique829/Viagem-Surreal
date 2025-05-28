@@ -1,4 +1,4 @@
-// Script assets have changed for v2.3.0 see
+      // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 //inputs
 global.inputs = {
@@ -22,7 +22,7 @@ function scr_inputs(_bool)
 	
 	_i.left = keyboard_check(ord("A"))
 	_i.right = keyboard_check(ord("D"))
-	_i.jump = keyboard_check(vk_space)
+	_i.jump = keyboard_check_pressed(vk_space)
 
 	
 	
