@@ -110,7 +110,7 @@
     "9647":{"character":9647,"h":74,"offset":10,"shift":51,"w":47,"x":835,"y":230,},
   },
   "hinting":0,
-  "includeTTF":false,
+  "includeTTF":true,
   "interpreter":0,
   "italic":false,
   "kerningPairs":[],
@@ -138,6 +138,6 @@
     "name":"Default",
     "path":"texturegroups/Default",
   },
-  "TTFName":"",
+  "TTFName":"C:\\Users\\marce\\OneDrive\\muita merda\\umas pastas ae\\Documentos\\gamemaker_project\\viagem_surreal\\Viagem-Surreal\\fonts\\fnt_cartoon_relief_bold\\CartoonRelief-Bold.ttf",
   "usesSDF":true,
 }

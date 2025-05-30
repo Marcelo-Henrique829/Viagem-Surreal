@@ -9,8 +9,14 @@ global.inputs = {
 	
 	left:false,	
 	right:false,
-	jump:false
+	jump:false,
+	interact:false
+}
+	
+player_cord = {
 
+	x:false,
+	y:false
 }
 
 
@@ -23,6 +29,7 @@ function scr_inputs(_bool)
 	_i.left = keyboard_check(ord("A"))
 	_i.right = keyboard_check(ord("D"))
 	_i.jump = keyboard_check_pressed(vk_space)
+	_i.interact = keyboard_check(vk_enter)
 
 	
 	
