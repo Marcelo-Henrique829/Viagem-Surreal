@@ -1,0 +1,1 @@
+if(!audio_is_playing(snd_msc_fundo)) audio_play_sound(snd_msc_fundo,2,1)

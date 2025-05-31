@@ -27,7 +27,7 @@ if(dist<50)
 	{
 		var camera_x_ = camera_get_view_x(view_camera[0]);
 		var camera_y_ = camera_get_view_y(view_camera[0]);
-
+		audio_play_sound(snd_interact,1,0)
 		layer_sequence_create("transition", camera_x_, camera_y_, sq_in);
 		global.destine = destine 
 	}

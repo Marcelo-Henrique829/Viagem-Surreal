@@ -10,7 +10,9 @@ global.inputs = {
 	left:false,	
 	right:false,
 	jump:false,
-	interact:false
+	interact:false,
+	up:false,
+	down:false
 }
 	
 player_cord = {
@@ -26,15 +28,18 @@ function scr_inputs(_bool)
 	
 	var _i = global.inputs
 	
-	_i.left = keyboard_check(ord("A"))
-	_i.right = keyboard_check(ord("D"))
+	_i.left = keyboard_check(ord("A")) or keyboard_check(vk_left)
+	_i.right = keyboard_check(ord("D")) or keyboard_check(vk_right)
 	_i.jump = keyboard_check_pressed(vk_space)
-	_i.interact = keyboard_check(vk_enter)
+	_i.interact = keyboard_check_pressed(vk_enter)
+	_i.up = keyboard_check(ord("W")) or  keyboard_check(vk_up)
+	_i.down = keyboard_check(ord("W")) or keyboard_check(vk_down)
+
 
 	
 	
-	_i.left_p = keyboard_check_pressed(ord("A"))
-	_i.right_p = keyboard_check_pressed(ord("D"))
+	_i.left_p = keyboard_check_pressed(ord("A")) or keyboard_check_pressed(vk_left)
+	_i.right_p = keyboard_check_pressed(ord("D")) or keyboard_check_pressed(vk_right)
 	
 
 }

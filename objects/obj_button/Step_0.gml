@@ -16,6 +16,7 @@ if(enter)
 	{
 		global.destine = rm_level
 		global.character = destine
+		audio_play_sound(snd_interact,1,0)
 		var _squence_in = layer_sequence_create("Transition",0,0,sq_in)
 		
 	}
